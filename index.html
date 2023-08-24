@@ -1,0 +1,106 @@
+<html>
+	<head>
+    <meta charset="utf-8" />
+		<title>Lista de Desejos</title>
+
+		<!-- Bootstrap início -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap fim -->
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/07948e42e1.js" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+	</head>
+    <body>
+        <nav class="navbar navbar-expand-lg mb-5">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                 <img src="logo.png" width="50" height="35" alt="Orçamento pessoal">
+              </a>
+      
+              <div class="menu" >
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="link" href="index.html">Criar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="link" href="lista.html">Lista</a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+
+          <div class="main container">
+            <div class="row">
+                <div class="col mb-5">
+                    <h1 class="title">Criar novo desejo</h1>
+                </div>
+            </div>
+            <div class="form_control row">
+                <div class="col-mb-2">
+                    <form>
+                        <label>Nome do desejo:</label>
+                        <input type="text" id="nome" placeholder="Insira o nome"/>
+                        <label>Tipo do desejo:</label>
+                        <select class="select" id="tipo">
+                          <option value="">Tipo</option>
+                          <option value="1">Veiculo</option>
+                          <option value="2">Educação</option>
+                          <option value="3">Eletrodomestico</option>
+                          <option value="4">Lazer</option>
+                          <option value="5">Imovel</option>
+                        </select>
+                        <label>Valor do desejo:</label>
+                        <input type="number" id="valor" placeholder="Insira o valor"/>
+                        <label>Descrição do desejo</label>
+                        <input type="text" id="descricao" placeholder="Insira uma descrição"/>
+                        <button type="button" class="button" onclick="cadastrarDesejo()">
+                          Criar Desejo
+                        </button>
+                    </form>
+                </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modalRegistraDesejo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div id="modal_titulo_div">
+                  <h5 class="modal-title" id="modal_titulo"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modal_conteudo"></div>
+                <div class="modal-footer">
+                  <button type="button" data-dismiss="modal" id="modal_btn"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <ul class="social_list">
+              <li>
+               <a href=""><i class="fa-brands fa-instagram"></i></a>  
+              </li>
+              <li>
+               <a href="https://github.com/ArthurLenin" target="_blank"><i class="fa-brands fa-github"></i></a>  
+              </li>
+              <li>
+               <a href="https://www.linkedin.com/in/arthur-lenin-mainardes-347777226/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>  
+              </li>
+              
+            </ul>
+          </footer>
+
+    </body>
+</html>
